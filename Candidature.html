@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Candidature — FRANC MAÇONNERIE</title>
+
+    <link rel="stylesheet" href="Candidature.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         FOND
+    =============================== -->
+
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <div class="rotating-logo-background">
+    <img src="Image/logo.png" alt="">
+</div>
+
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <a href="index.html" class="brand">
+
+            <img src="Image/logo.png" alt="ILLUMINATI">
+
+            <div class="brand-text">
+
+                <h2>FRANC MAÇONNERIE</h2>
+
+            </div>
+
+        </a>
+
+
+        <nav class="navigation">
+
+            <a href="index.html">
+                ACCUEIL
+            </a>
+
+            <a href="Doctrine.html">
+                MISSION
+            </a>
+
+            <a href="Selection.html">
+                MEMBRES
+            </a>
+
+            <a href="Candidature.html" class="active">
+                CANDIDATURE
+            </a>
+
+            <a href="Candidature.html" class="postuler">
+                POSTULER
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==============================
+         CONTENU PRINCIPAL
+    =============================== -->
+
+    <main class="candidature-page">
+
+
+        <!-- ==============================
+             INTRODUCTION
+        =============================== -->
+
+        <section class="intro">
+
+            <div class="small-title">
+                ÉTAPE 1 / 2 — DOSSIER
+            </div>
+
+            <h1>
+                Déposer votre dossier
+            </h1>
+
+            <p>
+                Soyez précis et sincère. Un dossier vague ou impersonnel est éliminé d'office.
+                À l'étape suivante, il vous sera demandé de régler les frais de dossier.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==============================
+             ÉTAPES
+        =============================== -->
+
+        <div class="steps">
+
+            <div class="step active">
+                <span>01</span>
+                DOSSIER
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step">
+                <span>02</span>
+                FRAIS DE DOSSIER
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step">
+                <span>03</span>
+                EXAMEN EN COURS
+            </div>
+
+        </div>
+
+
+
+        <!-- ==============================
+             ZONE PRINCIPALE
+        =============================== -->
+
+        <section class="main-grid">
+
+
+            <!-- ==========================
+                 COLONNE GAUCHE
+            =========================== -->
+
+            <div class="form-container">
+
+
+             <form id="applicationForm">
+                    <!-- ======================
+                         I — IDENTITÉ
+                    ======================= -->
+
+                    <div class="form-section-title">
+
+                        <span>I — IDENTITÉ</span>
+
+                        <div></div>
+
+                    </div>
+
+
+                    <div class="two-columns">
+
+    <!-- NOM -->
+    <div class="field">
+
+        <label for="nom">
+            NOM COMPLET *
+        </label>
+
+        <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Nom et Prenom"
+            required
+        >
+
+    </div>
+
+
+    <!-- EMAIL -->
+    <div class="field">
+
+        <label for="email">
+            EMAIL *
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="vous@exemple.com"
+            required
+        >
+
+    </div>
+
+
+
+    <!-- ==============================
+     WHATSAPP
+============================== -->
+
+<div class="field full">
+
+    <label for="whatsapp">
+        NUMÉRO WHATSAPP *
+    </label>
+
+    <input
+        type="tel"
+        id="whatsapp"
+        name="whatsapp"
+        placeholder="+33 XX XX XX XX"
+        required
+    >
+
+    <small class="field-help">
+        Entrez un numéro WhatsApp valide.
+    </small>
+
+</div>
+
+</div>
+
+
+<!-- ==============================
+     SITUATION MATRIMONIALE
+============================== -->
+
+<div class="field full">
+
+    <label for="situation">
+        SITUATION MATRIMONIALE *
+    </label>
+
+    <select
+        id="situation"
+        name="situation_matrimoniale"
+        required
+    >
+
+        <option value="">
+            Sélectionnez votre situation
+        </option>
+
+        <option value="Célibataire">
+            Célibataire
+        </option>
+
+        <option value="Marié(e)">
+            Marié(e)
+        </option>
+
+        <option value="Divorcé(e)">
+            Divorcé(e)
+        </option>
+
+        <option value="Veuf / Veuve">
+            Veuf / Veuve
+        </option>
+
+    </select>
+
+</div>
+
+
+
+<!-- ==============================
+     ÂGE
+============================== -->
+
+<div class="field full">
+
+    <label for="age">
+        VOTRE ÂGE *
+    </label>
+
+    <input
+        type="number"
+        id="age"
+        name="age"
+        min="18"
+        max="100"
+        placeholder="Votre âge"
+        required
+    >
+
+    <small class="field-help">
+        Vous devez avoir au minimum 18 ans.
+    </small>
+
+</div>
+
+
+
+
+
+
+
+                    <!-- ======================
+                         DOMAINE
+                    ======================= -->
+
+                    <div class="field full">
+
+                        <label for="domaine">
+                            DOMAINE / PROFESSION
+                        </label>
+
+                        <input
+                            type="text"
+                            id="domaine"
+                            name="domaine"
+                            placeholder="Votre domaine d'activité"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ======================
+                         PARRAIN
+                    ======================= -->
+
+                    <div class="field full">
+
+                        <label for="parcours">
+                            PARRAIN (Facultatif)
+                        </label>
+
+                        <textarea
+                            id="parcours"
+                            name="parcours"
+                            placeholder="Qui vous a parrainez?"
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- ======================
+                         MOTIVATION
+                    ======================= -->
+
+                    <div class="field full">
+
+                        <label for="motivation">
+                            POURQUOI FRAPPEZ-VOUS A CETTE PORTE
+                        </label>
+
+                        <textarea
+                            id="motivation"
+                            name="motivation"
+                            maxlength="5000"
+                            placeholder="Dites le simplement, et sans flatterie"
+                        ></textarea>
+
+                        <div class="textarea-info">
+
+                            <span>
+                                MAXIMUM 30 CARACTÈRES
+                            </span>
+
+                            <span id="counter">
+                                0 / 5000
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ======================
+                         III — ENGAGEMENTS
+                    ======================= -->
+
+                    <div class="form-section-title engagements-title">
+
+                        <span>III — ENGAGEMENTS</span>
+
+                        <div></div>
+
+                    </div>
+
+
+                    <label class="check-line">
+
+                        <input
+                          type="checkbox"
+                          id="engagement1"
+                          name="engagement_admission"
+                          value="Accepté"
+                        >
+
+                        <span>
+                            Je comprends que l'admission est à la discrétion du Conseil et n'est pas garantie.
+                        </span>
+
+                    </label>
+
+
+                    <label class="check-line">
+
+                        <input
+    type="checkbox"
+    id="engagement2"
+    name="engagement_discretion"
+    value="Accepté"
+>
+
+                        <span>
+                            Je m'engage à la discrétion sur les contenus internes si je suis admis(e).
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- ======================
+                         BAS FORMULAIRE
+                    ======================= -->
+
+                    <div class="form-bottom">
+
+                        <span>
+                            ÉTAPE SUIVANTE · FRAIS DE DOSSIER : 35 500 FCFA
+                        </span>
+
+
+                        <button
+                            type="submit"
+                            class="continue-button"
+                        >
+                            Continuer →
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 COLONNE DROITE
+            =========================== -->
+
+            <aside class="right-column">
+
+
+                <!-- ======================
+                     CE QUI EST EXAMINÉ
+                ======================= -->
+
+                <div class="info-card">
+
+                    <h3>
+                        CE QUI EST EXAMINÉ
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            La clarté et la sincérité de la motivation
+                        </li>
+
+                        <li>
+                            La cohérence du parcours et du domaine
+                        </li>
+
+                        <li>
+                            La capacité à tenir la discrétion
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- ======================
+                     CONFIDENTIALITÉ
+                ======================= -->
+
+                <div class="info-card">
+
+                    <h3>
+                        CONFIDENTIALITÉ
+                    </h3>
+
+                    <p>
+                        Vos informations ne servent qu'à l'examen de votre candidature par le Conseil.
+                        Elles ne sont ni revendues ni diffusées.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ======================
+                     DÉLAI
+                ======================= -->
+
+                <div class="info-card">
+
+                    <h3>
+                        DÉLAI DE RÉPONSE
+                    </h3>
+
+                    <p>
+                        Réponse du Conseil sous 24h ouvrés, par email et WhatsApp uniquement.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+
+            <img
+                src="Image/logo.png"
+                alt="Logo"
+            >
+
+        </div>
+
+
+        <div class="footer-symbols">
+
+            <span>◆</span>
+            <span>◆</span>
+            <span>◆</span>
+
+        </div>
+
+
+        <p class="footer-text">
+
+            FRANC MAÇONNERIE — Assemblée privée sur invitation et cooptation.
+            Les informations soumises via ce<br>
+            formulaire sont conservées uniquement pour l'examen des candidatures.
+
+        </p>
+
+
+        <nav class="footer-navigation">
+
+            <a href="index.html">
+                ACCUEIL
+            </a>
+
+            <a href="Doctrine.html">
+                MISSION
+            </a>
+
+            <a href="Selection.html">
+                MEMBRES
+            </a>
+
+            <a href="Candidature.html">
+                CANDIDATURE
+            </a>
+
+            <a href="#">
+                CONSEIL
+            </a>
+
+        </nav>
+
+    </footer>
+
+
+    <script src="Candidature.js"></script>
+
+</body>
+
+</html>

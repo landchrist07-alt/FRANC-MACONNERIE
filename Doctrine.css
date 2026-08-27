@@ -1,0 +1,993 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #eeeeeb;
+
+    background: #080808;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ARRIÈRE-PLAN
+========================================= */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("Image/fond.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: -3;
+}
+
+
+.overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.55) 0%,
+            rgba(5, 5, 5, 0.40) 50%,
+            rgba(5, 5, 5, 0.28) 100%
+        );
+
+    z-index: -2;
+}
+
+/* =========================================
+   LOGO ROTATIF EN ARRIÈRE-PLAN
+========================================= */
+
+.rotating-logo-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 650px;
+    height: 650px;
+
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+    pointer-events: none;
+
+    opacity: 0.08;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: rotate-logo 35s linear infinite;
+}
+
+.rotating-logo-background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+@keyframes rotate-logo {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    padding: 0 6.5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 9999;
+
+    background: rgba(8, 8, 8, 0.82);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   LOGO / MARQUE
+========================================= */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+
+.brand img {
+    width: 36px;
+    height: 36px;
+
+    object-fit: contain;
+}
+
+
+.brand-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.brand-text h2 {
+    margin: 0;
+
+    color: #eeeeeb;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.brand-text span {
+    color: #b38b25;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+.navigation a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #858281;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+
+.navigation a:hover {
+    color: #eeeeeb;
+}
+
+
+/* LIEN ACTIF */
+
+.navigation a.active {
+    color: #c51c1c;
+}
+
+
+.navigation a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -17px;
+
+    height: 2px;
+
+    background: #c99a2d;
+}
+
+
+/* =========================================
+   BOUTON POSTULER
+========================================= */
+
+.navigation .postuler {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 108px;
+
+    height: 37px;
+
+    padding: 0 20px;
+
+    border-radius: 25px;
+
+    color: white;
+
+    background: linear-gradient(
+        180deg,
+        #d21d1d,
+        #b30e0e
+    );
+
+    border: 1px solid #e52a25;
+}
+
+
+.navigation .postuler:hover {
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+.navigation .postuler::after {
+    display: none;
+}
+
+
+/* =========================================
+   CONTENU
+========================================= */
+
+.doctrine-page {
+    width: calc(100% - 176px);
+
+    max-width: 1115px;
+
+    margin: 0 auto;
+
+    padding: 160px 0 80px;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.doctrine-intro {
+    width: 820px;
+
+    max-width: 100%;
+
+    margin-bottom: 58px;
+}
+
+
+/* PETIT NUMÉRO */
+
+.section-number {
+    margin-bottom: 14px;
+
+    color: #c99a2d;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* GRAND TITRE */
+
+.doctrine-intro h1 {
+    margin: 0;
+
+    color: #f1eee9;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+}
+
+
+/* DESCRIPTION */
+
+.intro-text {
+    max-width: 800px;
+
+    margin-top: 22px;
+
+    color: #969391;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GRILLE DES 4 BLOCS
+========================================= */
+
+.doctrine-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================
+   CARTE
+========================================= */
+
+.doctrine-card {
+    min-height: 285px;
+
+    padding: 38px 28px 30px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+    background: rgba(7, 7, 7, 0.48);
+}
+
+
+/* NUMÉRO */
+
+.card-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d01818;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* TITRE CARTE */
+
+.doctrine-card h2 {
+    margin-bottom: 18px;
+
+    color: #eeeeeb;
+
+    font-size: 17px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+/* TEXTE CARTE */
+
+.doctrine-card p {
+    color: #8f8d8b;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 0 4%;
+    }
+
+
+    .navigation {
+        gap: 20px;
+    }
+
+
+    .doctrine-page {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .doctrine-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+
+    .brand img {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .brand-text h2 {
+        font-size: 14px;
+    }
+
+
+    .brand-text span {
+        font-size: 7px;
+    }
+
+
+    .navigation {
+        display: none;
+    }
+
+
+    .doctrine-page {
+        padding:
+            120px 25px 60px;
+    }
+
+
+    .doctrine-intro {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .section-number {
+        font-size: 11px;
+    }
+
+
+    .doctrine-intro h1 {
+        font-size: 40px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .intro-text {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .doctrine-grid {
+        grid-template-columns: 1fr;
+
+        border-right: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+
+    .doctrine-card {
+        min-height: auto;
+
+        padding: 30px 25px;
+    }
+
+}
+
+
+/* =========================================
+   PETIT MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .doctrine-page {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .doctrine-intro h1 {
+        font-size: 36px;
+    }
+
+
+    .doctrine-card h2 {
+        font-size: 16px;
+    }
+
+
+    .doctrine-card p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   SECTION RITES
+========================================= */
+
+.doctrine-rites {
+    width: calc(100% - 176px);
+    max-width: 1115px;
+
+    margin: 55px auto 0;
+}
+/* =========================================
+   GRILLE DES IMAGES
+========================================= */
+
+.rites-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1.15fr;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.rite-image {
+
+    position: relative;
+
+    height: 424px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    background: #090909;
+}
+
+
+.rite-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* =========================================
+   EFFET IMAGE
+========================================= */
+
+.rite-image:hover img {
+
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   LÉGENDE
+========================================= */
+
+.rite-caption {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 16px;
+
+    background: rgba(5, 5, 5, 0.92);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: #c99a2d;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   BOUTONS
+========================================= */
+
+.doctrine-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 48px;
+}
+
+
+/* =========================================
+   BOUTON ROUGE
+========================================= */
+
+.doctrine-primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 51px;
+
+    min-width: 246px;
+
+    padding: 0 28px;
+
+    border-radius: 28px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    background: linear-gradient(
+        180deg,
+        #d21d1d,
+        #b30e0e
+    );
+
+    border: 1px solid #e52a25;
+
+    box-shadow:
+        0 8px 25px rgba(190, 20, 20, 0.22);
+
+    transition: 0.3s ease;
+}
+
+
+.doctrine-primary-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(220, 30, 25, 0.35);
+}
+
+
+/* =========================================
+   BOUTON SECONDAIRE
+========================================= */
+
+.doctrine-secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 51px;
+
+    min-width: 163px;
+
+    padding: 0 25px;
+
+    border-radius: 28px;
+
+    text-decoration: none;
+
+    color: #eeeeeb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    background: rgba(8, 8, 8, 0.35);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    transition: 0.3s ease;
+}
+
+
+.doctrine-secondary-button:hover {
+
+    border-color: rgba(255, 255, 255, 0.4);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+@media (max-width: 700px) {
+
+    .doctrine-rites {
+        width: auto;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .rites-grid {
+        width: 100%;
+    }
+
+    .rite-image {
+        width: 100%;
+    }
+
+}
+
+
+
+/* =========================================
+   PIED DE PAGE — IDENTIQUE À L'ACCUEIL
+========================================= */
+
+.site-footer {
+    width: 100%;
+    margin-top: 100px;
+    min-height: 340px;
+
+    padding: 55px 25px 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(5, 5, 5, 0.25);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.footer-logo img {
+    width: 105px;
+    height: 105px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 12px rgba(180, 20, 20, 0.25));
+}
+
+
+/* =========================================
+   LOSANGES
+========================================= */
+
+.footer-symbols {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 17px;
+}
+
+.footer-symbols span {
+    color: #c99a2d;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   TEXTE
+========================================= */
+
+.footer-text {
+    margin-top: 22px;
+
+    color: #858281;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.footer-navigation {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-top: 25px;
+}
+
+.footer-navigation a {
+    text-decoration: none;
+
+    color: #5f5c5a;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.4px;
+
+    transition: 0.3s ease;
+}
+
+.footer-navigation a:hover {
+    color: #c99a2d;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .site-footer {
+        min-height: 380px;
+
+        padding: 50px 20px 40px;
+    }
+
+    .footer-logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .footer-text {
+        max-width: 350px;
+
+        font-size: 12px;
+    }
+
+    .footer-text br {
+        display: none;
+    }
+
+    .footer-navigation {
+        flex-wrap: wrap;
+
+        gap: 18px 25px;
+
+        max-width: 350px;
+    }
+
+}
