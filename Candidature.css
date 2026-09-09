@@ -1233,3 +1233,22 @@ body {
     }
 
 }
+
+.footer-payment {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+
+    color: #c99a2d;
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+}
+
+.footer-payment:hover {
+    color: #e5b94a;
+    text-decoration: underline;
+}
