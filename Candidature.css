@@ -671,10 +671,18 @@ body {
 
 
 .field select option {
+    background: #000;
+    color: #fff;
+}
 
-    background: #111;
+.champ select {
+    background-color: #000;
+    color: #fff;
+}
 
-    color: #eee;
+.champ select option {
+    background-color: #000;
+    color: #fff;
 }
 
 
@@ -1251,4 +1259,213 @@ body {
 .footer-payment:hover {
     color: #e5b94a;
     text-decoration: underline;
+}
+
+
+
+
+.candidature-formulaire {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.formulaire-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    background: rgba(10, 10, 10, 0.35);
+    padding: 35px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.colonne-gauche,
+.colonne-droite {
+    width: 100%;
+}
+
+.champ {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.champ label {
+    width: 165px;
+    min-width: 165px;
+    font-size: 13px;
+    color: #eeeeeb;
+}
+
+.champ input,
+.champ select {
+    flex: 1;
+    height: 27px;
+    border: none;
+    border-bottom: 1px dotted #555;
+    outline: none;
+    font-size: 13px;
+    background: transparent;
+    color: #eeeeeb;
+}
+
+.question {
+    margin-top: 18px;
+}
+
+.question label {
+    display: block;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.question textarea {
+    width: 100%;
+    min-height: 55px;
+    resize: vertical;
+    border: none;
+    border-bottom: 1px dotted #555;
+    outline: none;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.entete {
+    text-align: center;
+}
+
+.entete h3 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.entete h4 {
+    font-size: 13px;
+    margin: 8px 0 20px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0 5px;
+}
+
+.logos img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logos span {
+    font-weight: bold;
+}
+
+.entete p {
+    font-size: 11px;
+    margin: 5px 0;
+}
+
+.mots {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #222;
+    padding: 12px 0;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.titre-formulaire {
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.titre-formulaire h3 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.engagement {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.engagement input {
+    border: none;
+    border-bottom: 1px dotted #555;
+    outline: none;
+    width: 180px;
+}
+
+.signature {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.signature label {
+    display: block;
+    margin-bottom: 12px;
+    color: #eeeeeb;
+    font-size: 13px;
+}
+
+#signature-pad {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 180px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #c99a2d;
+    border-radius: 5px;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+#clear-signature {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .formulaire-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .champ {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.champ label {
+    display: block;
+    width: 145px;
+    min-width: 145px;
+    margin-bottom: 0;
+}
+
+    .champ input,
+    .champ select {
+        width: 100%;
+    }
+
+    .titre-formulaire {
+        margin-top: 35px;
+    }
 }
