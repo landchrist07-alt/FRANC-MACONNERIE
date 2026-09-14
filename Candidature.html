@@ -72,6 +72,26 @@
 
     </header>
 
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- ==============================
@@ -88,11 +108,11 @@
         <section class="intro">
 
             <div class="small-title">
-                ÉTAPE 1 / 2 — DOSSIER
+                ÉTAPE 1 / 2 — CANDIDATURE
             </div>
 
             <h1>
-                Déposer votre dossier
+                Déposer votre candidature
             </h1>
 
             <p>
@@ -112,7 +132,7 @@
 
             <div class="step active">
                 <span>01</span>
-                DOSSIER
+                CANDIDATURE
             </div>
 
             <div class="step-line"></div>
@@ -133,245 +153,200 @@
 
 
 
-        <!-- ==============================
-             ZONE PRINCIPALE
-        =============================== -->
-
-        <section class="main-grid">
-
-
-            <!-- ==========================
-                 COLONNE GAUCHE
-            =========================== -->
-
-            <div class="form-container">
-
-
              <form id="applicationForm">
-                    <!-- ======================
-                         I — IDENTITÉ
-                    ======================= -->
+<section class="candidature-formulaire">
 
-                    <div class="form-section-title">
+    <div class="formulaire-container">
 
-                        <span>I — IDENTITÉ</span>
+        <!-- COLONNE GAUCHE -->
+        <div class="colonne-gauche">
 
-                        <div></div>
+            <div class="champ">
+                <label>Nom :</label>
+                <input type="text" name="nom">
+            </div>
 
-                    </div>
+            <div class="champ">
+                <label>Prénom :</label>
+                <input type="text" name="prenom">
+            </div>
 
+             <div class="champ">
+                <label>E-mail :</label>
+                <input type="email" name="email">
+            </div>
 
-                    <div class="two-columns">
+            <div class="champ">
+                <label>Tel :</label>
+                <input type="tel" name="telephone">
+            </div>
 
-    <!-- NOM -->
-    <div class="field">
+            <div class="champ">
+                <label>Lieu de Naissance :</label>
+                <input type="text" name="lieu_naissance">
+            </div>
 
-        <label for="nom">
-            NOM COMPLET *
-        </label>
+            <div class="champ">
+                <label>Date de Naissance :</label>
+                <input type="date" name="date_naissance">
+            </div>
 
-        <input
-            type="text"
-            id="nom"
-            name="nom"
-            placeholder="Nom et Prenom"
-            required
-        >
+            <div class="champ">
+                <label>Religion d'Origine :</label>
+                <input type="text" name="religion_origine">
+            </div>
 
-    </div>
+            <div class="champ">
+                <label>Religion Actuelle :</label>
+                <input type="text" name="religion_actuelle">
+            </div>
 
+            <div class="champ">
+                <label>Niveau d'étude :</label>
+                <input type="text" name="niveau_etude">
+            </div>
 
-    <!-- EMAIL -->
-    <div class="field">
-
-        <label for="email">
-            EMAIL *
-        </label>
-
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="vous@exemple.com"
-            required
-        >
-
-    </div>
-
-
-
-    <!-- ==============================
-     WHATSAPP
-============================== -->
-
-<div class="field full">
-
-    <label for="whatsapp">
-        NUMÉRO WHATSAPP *
-    </label>
-
-    <input
-        type="tel"
-        id="whatsapp"
-        name="whatsapp"
-        placeholder="+33 XX XX XX XX"
-        required
-    >
-
-    <small class="field-help">
-        Entrez un numéro WhatsApp valide.
-    </small>
-
-</div>
-
-</div>
-
-
-<!-- ==============================
-     SITUATION MATRIMONIALE
-============================== -->
-
-<div class="field full">
-
-    <label for="situation">
-        SITUATION MATRIMONIALE *
-    </label>
-
-    <select
-        id="situation"
-        name="situation_matrimoniale"
-        required
-    >
-
-        <option value="">
-            Sélectionnez votre situation
-        </option>
-
-        <option value="Célibataire">
-            Célibataire
-        </option>
-
-        <option value="Marié(e)">
-            Marié(e)
-        </option>
-
-        <option value="Divorcé(e)">
-            Divorcé(e)
-        </option>
-
-        <option value="Veuf / Veuve">
-            Veuf / Veuve
-        </option>
-
+            <div class="champ">
+    <label>Condition Matrimoniale :</label>
+    <select name="condition_matrimoniale">
+        <option value="">Sélectionner</option>
+        <option value="Célibataire">Célibataire</option>
+        <option value="Marié(e)">Marié(e)</option>
+        <option value="Divorcé(e)">Divorcé(e)</option>
+        <option value="Veuf(ve)">Veuf(ve)</option>
+        <option value="Séparé(e)">Séparé(e)</option>
+        <option value="Union libre">Union libre</option>
     </select>
-
 </div>
 
+            <div class="champ">
+                <label>Sexe :</label>
+                <select name="sexe">
+                    <option value="">Sélectionner</option>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                </select>
+            </div>
+
+            <div class="champ">
+                <label>Profession :</label>
+                <input type="text" name="profession">
+            </div>
+
+            <div class="champ">
+                <label>Lieu de Travail :</label>
+                <input type="text" name="lieu_travail">
+            </div>
+
+            <div class="question">
+                <label>Pourquoi voulez-vous rentrer dans la grande famille de la Franc-maçonnerie ?</label>
+                <textarea name="motivation"></textarea>
+            </div>
+
+            <div class="question">
+                <label>
+                    Êtes-vous membres d'autres associations ésotériques ou initiatiques ?
+                    Depuis quand ? si vous avez quitté, pourquoi ?
+                </label>
+                <textarea name="associations"></textarea>
+            </div>
+
+            <div class="question">
+                <label>Quelle est votre position par rapport à la femme ?</label>
+                <textarea name="position_femme"></textarea>
+            </div>
+
+            <div class="question">
+                <label>Que pensez-vous de la Mère Universelle ?</label>
+                <textarea name="mere_universelle"></textarea>
+            </div>
+
+            <div class="question">
+                <label>Que pensez-vous de Dieu ?</label>
+                <textarea name="dieu"></textarea>
+            </div>
+
+        </div>
 
 
-<!-- ==============================
-     ÂGE
-============================== -->
+        <!-- COLONNE DROITE -->
+        <div class="colonne-droite">
 
-<div class="field full">
+            <div class="entete">
 
-    <label for="age">
-        VOTRE ÂGE *
-    </label>
+                <h3>À LA GLOIRE DU GRAND ARCHITECTE DE L’UNIVERS</h3>
 
-    <input
-        type="number"
-        id="age"
-        name="age"
-        min="18"
-        max="100"
-        placeholder="Votre âge"
-        required
-    >
+                <h4>RITE Haïtien (RHA)</h4>
 
-    <small class="field-help">
-        Vous devez avoir au minimum 18 ans.
-    </small>
+                <h3>LA RESPECTABLE LOGE MIXTE COLOMBE BLANCHE</h3>
 
+                <div class="logos">
+                    <img src="image/logo.png" alt="Logo">
+                    <span>#1</span>
+                    <img src="image/logo.png" alt="Logo">
+                </div>
+
+                <p>Orient de Port-au-prince</p>
+
+                <p>Sous les Auspices de la Grande Loge Dessalinienne d'Haïti de 2023</p>
+
+                <div class="mots">
+                    <span>Savoir</span>
+                    <span>Vouloir</span>
+                    <span>Oser</span>
+                    <span>Se Taire</span>
+                </div>
+
+            </div>
+
+            <div class="titre-formulaire">
+                <h3>Formulaire de Demande d'Initiation</h3>
+                <h3>et Dossier Complet</h3>
+            </div>
+
+            <div class="engagement">
+
+                <p>
+                    Moi, <input type="text" name="nom_engagement">
+                    <br><br>
+                    je jure, si la loge accepte ma candidature, de me conformer aux statuts
+                    qui me seront confiés et remis. Je jure d'être un ambassadeur de la
+                    Franc-maçonnerie par ma conduite à partir de la signature de ce formulaire.
+                    Je jure de me conformer pour toute enquête qui me sera demandée.
+                </p>
+
+            </div>
+
+           <div class="signature">
+    <label>Signature</label>
+
+    <canvas id="signature-pad"></canvas>
+
+    <button type="button" id="clear-signature">
+        Effacer la signature
+    </button>
+
+    <input type="hidden" name="signature" id="signature-data">
 </div>
 
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        
 
 
 
 
 
 
-                    <!-- ======================
-                         DOMAINE
-                    ======================= -->
-
-                    <div class="field full">
-
-                        <label for="domaine">
-                            DOMAINE / PROFESSION
-                        </label>
-
-                        <input
-                            type="text"
-                            id="domaine"
-                            name="domaine"
-                            placeholder="Votre domaine d'activité"
-                        >
-
-                    </div>
 
 
-
-                    <!-- ======================
-                         PARRAIN
-                    ======================= -->
-
-                    <div class="field full">
-
-                        <label for="parcours">
-                            PARRAIN (Facultatif)
-                        </label>
-
-                        <textarea
-                            id="parcours"
-                            name="parcours"
-                            placeholder="Qui vous a parrainez?"
-                        ></textarea>
-
-                    </div>
-
-
-
-                    <!-- ======================
-                         MOTIVATION
-                    ======================= -->
-
-                    <div class="field full">
-
-                        <label for="motivation">
-                            POURQUOI FRAPPEZ-VOUS A CETTE PORTE
-                        </label>
-
-                        <textarea
-                            id="motivation"
-                            name="motivation"
-                            maxlength="5000"
-                            placeholder="Dites le simplement, et sans flatterie"
-                        ></textarea>
-
-                        <div class="textarea-info">
-
-                            <span>
-                                MAXIMUM 30 CARACTÈRES
-                            </span>
-
-                            <span id="counter">
-                                0 / 5000
-                            </span>
-
-                        </div>
-
-                    </div>
+        
 
 
 
@@ -428,7 +403,7 @@
                     <div class="form-bottom">
 
                         <span>
-                            ÉTAPE SUIVANTE · FRAIS DE DOSSIER : 25 555 FCFA
+                            ÉTAPE SUIVANTE · FRAIS DE DOSSIER : 35 500 FCFA
                         </span>
 
 
