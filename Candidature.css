@@ -1475,11 +1475,17 @@ body {
 
     .champ input,
     .champ select {
-        flex: 1;
-        width: auto;
-        min-width: 0;
-        box-sizing: border-box;
-    }
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-bottom: 1px dotted #555;
+    box-sizing: border-box;
+    align-self: center;
+}
 
     .question {
         width: 100%;
