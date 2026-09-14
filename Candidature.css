@@ -1291,7 +1291,7 @@ body {
 .champ {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .champ label {
