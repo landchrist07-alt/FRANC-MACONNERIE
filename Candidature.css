@@ -1443,15 +1443,18 @@ body {
 @media (max-width: 768px) {
 
     .candidature-formulaire {
-        padding: 25px 10px;
+        width: 100%;
+        padding: 25px 0;
+        box-sizing: border-box;
     }
 
     .formulaire-container {
         grid-template-columns: 1fr;
-        padding: 20px 10px;
         width: 100%;
         max-width: 100%;
         margin: 0;
+        padding: 20px 0;
+        box-sizing: border-box;
     }
 
     .champ {
@@ -1459,12 +1462,14 @@ body {
         align-items: center;
         gap: 10px;
         width: 100%;
+        box-sizing: border-box;
     }
 
     .champ label {
         width: 145px;
         min-width: 145px;
         margin-bottom: 0;
+        box-sizing: border-box;
     }
 
     .champ input,
@@ -1472,6 +1477,18 @@ body {
         flex: 1;
         width: auto;
         min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .question {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .question textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .titre-formulaire {
