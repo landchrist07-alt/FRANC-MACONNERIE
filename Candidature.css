@@ -1449,6 +1449,61 @@ body {
     }
 
     .formulaire-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    .champ {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+   .champ label {
+    width: auto;
+    min-width: 0;
+    white-space: nowrap;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+    .champ input,
+    .champ select {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .question {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .question textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .titre-formulaire {
+        margin-top: 35px;
+    }
+}@media (max-width: 768px) {
+
+    .candidature-formulaire {
+        width: 100%;
+        padding: 25px 0;
+        box-sizing: border-box;
+    }
+
+    .formulaire-container {
         width: 100%;
         max-width: 100%;
         margin: 0;
