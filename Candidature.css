@@ -1442,27 +1442,36 @@ body {
 
 @media (max-width: 768px) {
 
+    .candidature-formulaire {
+        padding: 25px 10px;
+    }
+
     .formulaire-container {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 20px 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
     }
 
     .champ {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
 
-.champ label {
-    display: block;
-    width: 145px;
-    min-width: 145px;
-    margin-bottom: 0;
-}
+    .champ label {
+        width: 145px;
+        min-width: 145px;
+        margin-bottom: 0;
+    }
 
     .champ input,
     .champ select {
-        width: 100%;
+        flex: 1;
+        width: auto;
+        min-width: 0;
     }
 
     .titre-formulaire {
