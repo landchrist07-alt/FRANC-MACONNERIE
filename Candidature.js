@@ -38,22 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault();
 
+        const nom = form.elements["nom"].value.trim();
+const email = form.elements["email"].value.trim();
+const situation = form.elements["condition_matrimoniale"].value;
 
-        /* =====================================
-           RÉCUPÉRATION DES DONNÉES
-        ===================================== */
 
-     const email =
-    document.getElementById("email").value.trim();
-
-const whatsapp =
-    document.getElementById("whatsapp").value.trim();
-
-const situation =
-    document.getElementById("situation").value;
-
-const age =
-    document.getElementById("age").value;
 
 
         /* =====================================
@@ -82,67 +71,7 @@ const age =
 
             return;
         }
-
-        /* =====================================
-   WHATSAPP
-===================================== */
-
-if (whatsapp === "") {
-
-    alert(
-        "Veuillez renseigner votre numéro WhatsApp."
-    );
-
-    return;
-}
-
-const whatsappClean =
-    whatsapp.replace(/[\s()-]/g, "");
-
-if (!/^\+?[0-9]{8,15}$/.test(whatsappClean)) {
-
-    alert(
-        "Veuillez renseigner un numéro WhatsApp valide."
-    );
-
-    return;
-}
-
-        /* =====================================
-           SITUATION MATRIMONIALE
-        ===================================== */
-
-        if (situation === "") {
-
-            alert(
-                "Veuillez sélectionner votre situation matrimoniale."
-            );
-
-            return;
-        }
-
-
-
-        /* =====================================
-           ÂGE
-        ===================================== */
-
-        if (
-            age === "" ||
-            Number(age) < 18
-        ) {
-
-            alert(
-                "Vous devez avoir au minimum 18 ans pour déposer une candidature."
-            );
-
-            return;
-        }
-
-
     
-
-
 
 
 
@@ -307,3 +236,82 @@ alert(errorMessage);
     });
 
 });
+
+
+const signaturePad = document.getElementById("signature-pad");
+const signatureData = document.getElementById("signature-data");
+const clearSignature = document.getElementById("clear-signature");
+
+if (signaturePad) {
+
+    const ctx = signaturePad.getContext("2d");
+
+    function resizeSignaturePad() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+
+        signaturePad.width = signaturePad.offsetWidth * ratio;
+        signaturePad.height = signaturePad.offsetHeight * ratio;
+
+        ctx.scale(ratio, ratio);
+
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        ctx.strokeStyle = "#000";
+    }
+
+    resizeSignaturePad();
+
+    let drawing = false;
+
+    function getPosition(event) {
+        const rect = signaturePad.getBoundingClientRect();
+
+        return {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
+        };
+    }
+
+    signaturePad.addEventListener("pointerdown", function(event) {
+        drawing = true;
+
+        const position = getPosition(event);
+
+        ctx.beginPath();
+        ctx.moveTo(position.x, position.y);
+
+        signaturePad.setPointerCapture(event.pointerId);
+    });
+
+    signaturePad.addEventListener("pointermove", function(event) {
+
+        if (!drawing) return;
+
+        const position = getPosition(event);
+
+        ctx.lineTo(position.x, position.y);
+        ctx.stroke();
+    });
+
+    signaturePad.addEventListener("pointerup", function() {
+        drawing = false;
+        signatureData.value = signaturePad.toDataURL("image/png");
+    });
+
+    signaturePad.addEventListener("pointercancel", function() {
+        drawing = false;
+    });
+
+    clearSignature.addEventListener("click", function() {
+
+        ctx.clearRect(
+            0,
+            0,
+            signaturePad.width,
+            signaturePad.height
+        );
+
+        signatureData.value = "";
+    });
+}
