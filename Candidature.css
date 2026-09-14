@@ -1495,7 +1495,10 @@ body {
     .titre-formulaire {
         margin-top: 35px;
     }
-}@media (max-width: 768px) {
+}
+
+
+@media (max-width: 768px) {
 
     .candidature-formulaire {
         width: 100%;
