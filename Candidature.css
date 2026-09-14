@@ -1527,11 +1527,6 @@ body {
         box-sizing: border-box;
     }
 
-    .champ label {
-        width: 145px;
-        min-width: 145px;
-        margin-bottom: 0;
-    }
 
     .champ input,
     .champ select {
