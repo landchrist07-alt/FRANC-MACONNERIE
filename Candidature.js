@@ -104,7 +104,7 @@ const situation = form.elements["condition_matrimoniale"].value;
         ===================================== */
 
         const button =
-    form.querySelector(".continue-button");
+    form.querySelector(".bouton.Continuer");
 
         const originalText =
             button.textContent;
