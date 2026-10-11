@@ -104,7 +104,7 @@ const situation = form.elements["condition_matrimoniale"].value;
         ===================================== */
 
         
-const button = form.querySelector(".bouton.Continuer");
+const button = form.querySelector("bouton.Continuer");
 
 if (!button) {
     alert("Erreur : bouton Continuer introuvable.");
