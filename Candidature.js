@@ -103,16 +103,18 @@ const situation = form.elements["condition_matrimoniale"].value;
            BOUTON
         ===================================== */
 
-        const button =
-    form.querySelector("bouton.Continuer");
+        
+const button = form.querySelector("bouton.Continuer");
 
-        const originalText =
-            button.textContent;
+if (!button) {
+    alert("Erreur : bouton Continuer introuvable.");
+    return;
+}
 
-        button.disabled = true;
+const originalText = button.textContent;
 
-        button.textContent =
-            "Envoi en cours...";
+button.disabled = true;
+button.textContent = "Envoi en cours...";
 
 
         /* =====================================
