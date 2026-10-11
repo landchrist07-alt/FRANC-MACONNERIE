@@ -104,7 +104,7 @@ const situation = form.elements["condition_matrimoniale"].value;
         ===================================== */
 
         const button =
-            form.querySelector(".continue-button");
+    form.querySelector(".Continuer");
 
         const originalText =
             button.textContent;
@@ -148,7 +148,7 @@ const situation = form.elements["condition_matrimoniale"].value;
             if (response.ok) {
 
                 window.location.href =
-                    "https://new.sebpay.bj/fr/pay/demande-dinitiation-8NniK3";
+    "https://new.sebpay.bj/pay/demande-dinitiation-8NniK3";
 
                 return;
             }
